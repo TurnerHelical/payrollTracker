@@ -9,18 +9,20 @@ const collectEmployees = function () {
   let anotherEmployee = true;
   while (anotherEmployee == true) {
     let fName = prompt('Input employee first name.')
-    if (fName === null || fName === "") {
-      alert('Invalid input')
+     if (fName === null || fName === "") {
+        alert('Invalid input')
   }
     let lName = prompt('Input employee last name')
-    if (lName === null || lName === "") {
-      alert('Invalid Input')
+      if (lName === null || lName === "") {
+        alert('Invalid Input')
   }
     let salary = prompt('Input employee salary')
-    if (salary === null || salary === "") {
-      alert('Invalid Input')
-  }
-  
+      if (salary === null || salary === "") {
+        alert('Invalid Input')
+  }   
+      if (isNaN(salary)){
+        salary = 0
+      }
     let employee = {
       firstName: `${fName}`,
       lastName: `${lName}`,
@@ -33,8 +35,6 @@ const collectEmployees = function () {
   } else {
       anotherEmployee = false
   }
-
-
 }
   return employees
 }
