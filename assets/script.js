@@ -9,17 +9,24 @@ const collectEmployees = function () {
   let anotherEmployee = true;
   while (anotherEmployee == true) {
     let fName = prompt('Input employee first name.')
-     if (fName === null || fName === "") {
+     if (fName === "") {
         alert('Invalid input')
+  }  if (fName === null) {
+        break
   }
     let lName = prompt('Input employee last name')
-      if (lName === null || lName === "") {
+      if (lName === "") {
         alert('Invalid Input')
-  }
+  }   if (lName === null) {
+        break
+}
     let salary = prompt('Input employee salary')
-      if (salary === null || salary === "") {
+      if (salary === "") {
         alert('Invalid Input')
   }   
+      if (salary === null) {
+        break
+}
       if (isNaN(salary)){
         salary = 0
       }
@@ -43,6 +50,7 @@ const collectEmployees = function () {
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
+  // Math function to find the average of the employee salaries and log to console
 }
 
 // Select a random employee
